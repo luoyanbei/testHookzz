@@ -51,9 +51,9 @@ iOS使用HookZz框架修改“This war of mine”游戏的逻辑，使其进入�
 8.编译tweak项目并安装到越狱设备，打开游戏app，查看Xcode输出的系统日志，发现输出了“GodMode Enabled”，这可以作为进入上帝模式的依据。
 
 打印如下：
-'''
+```
     Dec 18 22:41:16 Kainuo-kwj TWoM[95161] <Warning>: 测试---x8 is:开始
     Dec 18 22:41:16 Kainuo-kwj TWoM[95161] <Warning>: 测试---request(x8) is: 0
     Dec 18 22:41:16 Kainuo-kwj TWoM[95161] <Warning>: 测试---request(x8) 修改后is: 4
     Dec 18 22:41:16 Kainuo-kwj TWoM[95161] <Warning>: 测试---日志：GodMode Enabled
-'''
+```
