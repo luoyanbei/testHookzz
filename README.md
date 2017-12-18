@@ -29,5 +29,6 @@ iOS使用HookZz框架修改“This war of mine”游戏的逻辑，使其进入�
 1.把游戏的二进制文件“TWoM”拖入IDA分析，选择分析64位版本。
 
 2.分析完成，打开“Strings window”窗口，搜索"GodMode"关键字，可以得到“GodMode Enabled”和“GodMode Disabled”，根据搜索结果查看对应的汇编语句。
-![搜索结果](./image/0@2x.png)
+![搜索结果](./images/0@2x.png)
+
 3.
