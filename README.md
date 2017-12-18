@@ -42,7 +42,7 @@ iOS使用HookZz框架修改“This war of mine”游戏的逻辑，使其进入�
 
 5.使用HookZz框架中的 ZzBuildHookAddress 方法来修改w8寄存器的值。
 
-6.“GodMode Enabled”和“GodMode Disabled” 都执行了 sub_10025F9EC 函数，根据[ios游戏This war of Mine 辅助开发实录](https://myhloli.com/mod-of-this-war-of-mine.html)的讲解，这个方法是一个打印函数，使用 MSHookFunction 来hook这个函数，在这里添加一条打印语句。
+6.“GodMode Enabled”和“GodMode Disabled” 都执行了 sub_10025F9EC 函数，根据[ios游戏This war of Mine 辅助开发实录](https://myhloli.com/mod-of-this-war-of-mine.html)的讲解，这貌似是一个打印函数，使用 MSHookFunction 来hook这个函数，在这里添加一条打印语句。
 
 ![3](./images/3@2x.png)
 
@@ -57,3 +57,11 @@ iOS使用HookZz框架修改“This war of mine”游戏的逻辑，使其进入�
     Dec 18 22:41:16 Kainuo-kwj TWoM[95161] <Warning>: 测试---request(x8) 修改后is: 4
     Dec 18 22:41:16 Kainuo-kwj TWoM[95161] <Warning>: 测试---日志：GodMode Enabled
 ```
+
+# 结束
+
+- 代码仅供学习交流，谢绝其他非法用途，感谢您 帮忙在右上角 点个“⭐️”，非常感谢
+
+- 大神开发的框架非常好用：
+[HookZz](https://github.com/jmpews/HookZz)框架
+[MonkeyDev](https://github.com/AloneMonkey/MonkeyDev)框架
