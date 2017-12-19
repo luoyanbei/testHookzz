@@ -2,6 +2,7 @@
 
 iOS使用HookZz框架hook游戏“我的战争”(英文名“This war of mine”)，使其进入上帝模式，实现作弊。
 
+代码仅供学习交流，感谢您 帮忙在右上角 点个“⭐️”，非常感谢
 
 ## 功能介绍
 
@@ -45,7 +46,7 @@ iOS使用HookZz框架hook游戏“我的战争”(英文名“This war of mine�
 
 5.使用HookZz框架中的 ZzBuildHookAddress 方法来修改w8寄存器的值。
 
-6.“GodMode Enabled”和“GodMode Disabled” 都执行了 sub_10025F9EC 函数，根据[ios游戏This war of Mine 辅助开发实录](https://myhloli.com/mod-of-this-war-of-mine.html)的讲解，这貌似是一个打印函数，使用 MSHookFunction 来hook这个函数，在这里添加一条打印语句。
+6.“GodMode Enabled”和“GodMode Disabled” 都执行了 sub_10025F9EC 函数，根据[ios游戏This war of Mine 辅助开发实录](https://myhloli.com/mod-of-this-war-of-mine.html)的讲解，这貌似是一个打印函数，使用HookZz的ZzBuildHook 来hook这个函数，在这里添加一条打印语句。
 
 ![3](./images/3@2x.png)
 

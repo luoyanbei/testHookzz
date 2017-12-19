@@ -1,4 +1,4 @@
-#line 1 "/Users/king/Desktop/2017工作/永康十三水/testHookzz/testHookzz/testHookzz.xm"
+#line 1 "/Users/king/Documents/GitHub/testHookzz/testHookzz/testHookzz.xm"
 
 #import <UIKit/UIKit.h>
 
@@ -31,17 +31,17 @@ int new_sub_10025F9EC(char * a1,int a2,int a3,const char * a4)
     return result;
     
     
-    
 }
 
 
 void getpid_pre_call_sub_10025F9EC(RegState *rs, ThreadStack *threadstack, CallStack *callstack)
 {
-    NSLog(@"测试---x8 is:开始 ");
+    NSLog(@"测试---x8 is:开始");
     
     unsigned long request = *(unsigned long *)(&rs->general.regs.x8);
-
+    
     NSLog(@"测试---request(x8) is: %ld\n", request);
+    
     
     *(&rs->general.regs.x8) = 4;
     
@@ -61,15 +61,43 @@ void getpid_half_call_sub_10025F9EC(RegState *rs, ThreadStack *threadstack, Call
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_44f683a8(int __unused argc, char __unused **argv, char __unused **envp)
+
+void printf_pre_call(RegState *rs, ThreadStack *threadstack, CallStack *callstack) {
+   
+    
+    NSLog(@"printf-pre-call");
+}
+
+void printf_post_call(RegState *rs, ThreadStack *threadstack, CallStack *callstack) {
+   
+    NSLog(@"printf-post-call");
+}
+
+
+
+
+
+
+
+static __attribute__((constructor)) void _logosLocalCtor_f033ab37(int __unused argc, char __unused **argv, char __unused **envp)
 {
-    NSLog(@"测试===加载我的战争dylib---start");
+    NSLog(@"测试===加载我的战争dylib---start-1");
     
     
     unsigned long _sub_10025F9EC = (_dyld_get_image_vmaddr_slide(0) + 0x10025F9EC);
+    void *hack_sub_10025F9EC = (void *)_sub_10025F9EC;
     
     
-    MSHookFunction((void *)_sub_10025F9EC, (void *)&new_sub_10025F9EC, (void **)&old_sub_10025F9EC);
+    ZzBuildHook((void *)hack_sub_10025F9EC, (void *)new_sub_10025F9EC, (void **)&old_sub_10025F9EC, printf_pre_call, printf_post_call,TRUE);
+    ZzEnableHook((void *)hack_sub_10025F9EC);
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     void *hack_this_function_ptr = (void *)(_dyld_get_image_vmaddr_slide(0) + 0x10015CC40);
