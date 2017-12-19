@@ -1,5 +1,6 @@
 # testHookzz
-iOS使用HookZz框架修改“This war of mine”游戏的逻辑，使其进入上帝模式
+
+iOS使用HookZz框架hook游戏“我的战争”(英文名“This war of mine”)，使其进入上帝模式，实现作弊。
 
 
 ## 功能介绍
@@ -7,6 +8,8 @@ iOS使用HookZz框架修改“This war of mine”游戏的逻辑，使其进入�
 本项目主要目的是学习使用[HookZz](https://github.com/jmpews/HookZz)框架做iOS逆向
 
 本项目中使用的游戏逆向思路源于[ios游戏This war of Mine 辅助开发实录](https://myhloli.com/mod-of-this-war-of-mine.html)
+，文中介绍该游戏可进入上帝模式，对人物属性的hungry，sick，wounded等属性做了修改，这可能是官方预留的内挂，通过特定途径，可以开启上帝模式，也就是作弊模式，人物不会饥饿受伤。原文是在静态分析中把if语句的跳转汇编代码改成nop，使游戏跳转到上帝模式，而当前项目是动态修改寄存器的值，实现相同的目的。
+
 
 
 
