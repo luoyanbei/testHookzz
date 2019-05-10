@@ -71,3 +71,6 @@ iOS使用HookZz框架hook游戏“我的战争”(英文名“This war of mine�
     [HookZz](https://github.com/jmpews/HookZz)框架
 
     [MonkeyDev](https://github.com/AloneMonkey/MonkeyDev)框架
+
+## 关注公众号：逆向APP
+<div align=center><img width="258" height="258" src="./images/qrcode_gongzhonghao.jpg"/>
